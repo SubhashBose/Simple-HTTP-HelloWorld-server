@@ -30,12 +30,14 @@ jobs:
     strategy:
       matrix:
         goos: [linux, windows, freebsd, darwin]
-        goarch: ["386", amd64, arm64]
+        goarch: ["386", amd64, arm64, arm]
         exclude:
           - goarch: "386"
             goos: darwin
           - goarch: "386"
             goos: freebsd
+          - goarch: "arm"
+            goos: darwin
     steps:
       - uses: actions/checkout@v4
       - name: Build

@@ -26,5 +26,5 @@ Precompiled binaries are available for a wide range of platforms.
 ./http-helloworld -addr 8000 -text "Hello, World!!"
 ````
 
-* `-addr`: (optional) Port number to bind the server to (default: `8080`)
+* `-addr`: (optional) IP:Port address or Port number to bind the server to (default: `8080`)
 * `-text`: (optional) Response text to serve (default: `"Hello, World!"`)

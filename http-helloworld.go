@@ -5,12 +5,13 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"internal/stringslite"
 )
 
 func main() {
 	// Define port flag with default value of 8080
 	text := flag.String("text", "Hello, World!", "Text body to serve")
-	port := flag.Int("port", 8080, "port to run the server on")
+	addr := flag.String("addr", "8080", "Address to run the server on. This can a full address in IP:PORT format or just a PORT listening to all adresses.")
 	flag.Parse()
 
 	// Define handler for root path
@@ -19,8 +20,10 @@ func main() {
 	})
 
 	// Start server on specified port
-	addr := fmt.Sprintf(":%d", *port)
-	log.Printf("Server starting on port %d", *port)
+	if(stringslite.Index(addr, ":") < 0){
+		addr := ":" + addr
+	}
+	log.Printf("Server starting on address %s", *addr)
 	if err := http.ListenAndServe(addr, nil); err != nil {
 		log.Fatalf("Server failed to start: %v", err)
 	}

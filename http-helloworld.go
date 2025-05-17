@@ -16,6 +16,7 @@ func main() {
 
 	// Define handler for root path
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Server", "HTTP HelloWorld Server by S. Bose")
 		fmt.Fprintf(w, *text)
 	})
 

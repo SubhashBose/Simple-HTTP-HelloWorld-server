@@ -8,9 +8,25 @@ permissions:
   packages: write
 
 jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    outputs:
+      tagname: ${{ steps.create_tag.outputs.tag }}
+    steps:
+      - name: Create tag
+        id: create_tag
+        run: |
+          tag=$(date +%Y-%m-%d_%H%M%S)
+          echo "tag=$tag" >> $GITHUB_OUTPUT
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.create_tag.outputs.tag }}
+
   releases-matrix:
     name: Release Go Binary
     runs-on: ubuntu-latest
+    needs: create-release
     strategy:
       matrix:
         goos: [linux, windows, freebsd, darwin]
@@ -22,18 +38,6 @@ jobs:
             goos: freebsd
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Create tag
-        id: create_tag
-        run: |
-          tag=$(date +%Y-%m-%d_%H%M%S)
-          echo "tag=$tag" >> $GITHUB_OUTPUT
-      
-      - name: Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ steps.create_tag.outputs.tag }}
-
       - name: Build
         uses: wangyoucao577/go-release-action@v1
         with:
@@ -41,6 +45,6 @@ jobs:
           goos: ${{ matrix.goos }}
           goarch: ${{ matrix.goarch }}
           goversion: "1.23"
-          release_tag: ${{ steps.create_tag.outputs.tag }}
+          release_tag: ${{ needs.create-release.outputs.tagname }}
           asset_name: "http-helloworld_${{ matrix.goos }}-${{ matrix.goarch }}"
           #binary_name: "http-helloworld_${{ matrix.goos }}-${{ matrix.goarch }}"

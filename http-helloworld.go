@@ -9,7 +9,7 @@ import (
 
 func main() {
 	// Define port flag with default value of 8080
-	text := flag.Int("text", "Hello, World!", "Text body to serve")
+	text := flag.String("text", "Hello, World!", "Text body to serve")
 	port := flag.Int("port", 8080, "port to run the server on")
 	flag.Parse()
 

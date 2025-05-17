@@ -47,4 +47,5 @@ jobs:
           goversion: "1.23"
           release_tag: ${{ needs.create-release.outputs.tagname }}
           asset_name: "http-helloworld_${{ matrix.goos }}-${{ matrix.goarch }}"
+          compress_assets: OFF
           #binary_name: "http-helloworld_${{ matrix.goos }}-${{ matrix.goarch }}"

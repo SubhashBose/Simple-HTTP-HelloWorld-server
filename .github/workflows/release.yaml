@@ -35,7 +35,6 @@ jobs:
           goos: ${{ matrix.goos }}
           goarch: ${{ matrix.goarch }}
           goversion: "1.23"
-          build_flags: "http-helloworld.go"
           release_tag: ${{ steps.create_tag.outputs.tag }}
           asset_name: "http-helloworld_${{ matrix.goos }}-${{ matrix.goarch }}"
           #binary_name: "http-helloworld_${{ matrix.goos }}-${{ matrix.goarch }}"

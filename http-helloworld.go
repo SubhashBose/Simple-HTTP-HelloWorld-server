@@ -9,12 +9,13 @@ import (
 
 func main() {
 	// Define port flag with default value of 8080
+	text := flag.Int("text", "Hello, World!", "Text body to serve")
 	port := flag.Int("port", 8080, "port to run the server on")
 	flag.Parse()
 
 	// Define handler for root path
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello, World!")
+		fmt.Fprintf(w, *text)
 	})
 
 	// Start server on specified port

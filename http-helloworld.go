@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"internal/stringslite"
+	"strings"
 )
 
 func main() {
@@ -20,7 +20,7 @@ func main() {
 	})
 
 	// Start server on specified port
-	if(stringslite.Index(addr, ":") < 0){
+	if(strings.Index(addr, ":") < 0){
 		addr := ":" + addr
 	}
 	log.Printf("Server starting on address %s", *addr)

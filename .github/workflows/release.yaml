@@ -28,8 +28,14 @@ jobs:
         run: |
           tag=$(date +%Y-%m-%d_%H%M%S)
           echo "tag=$tag" >> $GITHUB_OUTPUT
+      
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.create_tag.outputs.tag }}
 
-      - uses: wangyoucao577/go-release-action@v1
+      - name: Build
+        uses: wangyoucao577/go-release-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           goos: ${{ matrix.goos }}

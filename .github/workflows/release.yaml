@@ -1,0 +1,42 @@
+name: Release Go Binaries
+
+on:
+  release:
+    types: [created]
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  releases-matrix:
+    name: Release Go Binary
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        goos: [linux, windows, freebsd, darwin]
+        goarch: ["386", amd64, arm64]
+        exclude:
+          - goarch: "386"
+            goos: darwin
+          - goarch: "386"
+            goos: freebsd
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Create tag
+        id: create_tag
+        run: |
+          tag=$(date +%Y-%m-%d_%H%M%S)
+          echo "tag=$tag" >> $GITHUB_OUTPUT
+
+      - uses: wangyoucao577/go-release-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          goos: ${{ matrix.goos }}
+          goarch: ${{ matrix.goarch }}
+          goversion: "1.23"
+          project_path: "."
+          release_tag: ${{ steps.create_tag.outputs.tag }}
+          asset_name: "http-helloworld_${{ matrix.goos }}-${{ matrix.goarch }}"
+          #binary_name: "http-helloworld_${{ matrix.goos }}-${{ matrix.goarch }}"

@@ -21,7 +21,7 @@ func main() {
 
 	// Start server on specified port
 	if(strings.Index(addr, ":") < 0){
-		addr := ":" + addr
+		addr = ":" + addr
 	}
 	log.Printf("Server starting on address %s", addr)
 	if err := http.ListenAndServe(addr, nil); err != nil {

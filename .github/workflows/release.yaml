@@ -34,8 +34,6 @@ jobs:
         exclude:
           - goarch: "386"
             goos: darwin
-          - goarch: "386"
-            goos: freebsd
           - goarch: "arm"
             goos: darwin
     steps:

@@ -1,7 +1,7 @@
 # Simeple HTTP Hello-World webserver
 A simple HTTP Hello-World webserver in Go lang.
 
-Binaries are compiled for almost every possible OS and architecture combinations. Pre-compiled binaries can be downloaded from [releases](./releases)
+Binaries are compiled for almost every possible OS and architecture combinations. Pre-compiled binaries can be downloaded from [releases](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server).
 
 Example: (port and text arguments are optional)
 ```

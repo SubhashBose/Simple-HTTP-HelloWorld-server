@@ -17,7 +17,7 @@ func main() {
 
 	// Define handler for root path
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		if(logging) {
+		if(*logging) {
 			log.Printf("Received hit from %s", r.RemoteAddr)
 		}
 		w.Header().Set("Server", "HTTP HelloWorld Server by S. Bose")

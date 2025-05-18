@@ -28,3 +28,4 @@ Precompiled binaries are available for a wide range of platforms.
 
 * `-addr`: (optional) IP:Port address or Port number to bind the server to (default: `8080`)
 * `-text`: (optional) Response text to serve (default: `"Hello, World!"`)
+* `-log`:  (optional) Turn on console logging all requests received. 

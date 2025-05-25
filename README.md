@@ -7,13 +7,13 @@ A minimal, dependency-free HTTP server written in Go. This utility is designed f
 - 🚀 **No external dependencies**
 - 📦 **Small binary size (~5 MiB)**
 - 🧠 **Small CPU and memory footprint**
-- 🛠 **Single command to run**
+- 🛠 **One-line command to run - no configuration file**
 - 🔒 **Secure by design** – serves only static, predefined content
 - 🌍 **Cross-compiled for 15 OS and architecture combinations**
 
 ## Use Case
 
-This tool is ideal for simple network testing. It serves a static message (set at server startup) and does not expose any dynamic or client-controlled content, making it safe to use in public or production environments.
+This tool is ideal for simple network testing. It serves a static message (set at server startup) and does not expose any dynamic or client-controlled content, making it safe to use in public or production environments. It can be put in Docker containers and used for health checks. 
 
 ## Download
 
@@ -31,8 +31,8 @@ Precompiled binaries are available for a wide range of platforms.
 | Windows  | i386 32-bit  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_windows-386.exe) |
 | Windows  | ARM 64-bit  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_windows-arm64.exe) |
 | Windows  | ARM 32-bit   | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_windows-arm.exe) |
-| MacOS    | Apple Silicon 64-bit  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_darwin-amd64) |
-| MacOS    | Intel 64-bit  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_darwin-arm64) |
+| MacOS    | Apple Silicon 64-bit  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_darwin-arm64) |
+| MacOS    | Intel 64-bit  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_darwin-amd64) |
 | FreeBSD  | AMD 64-bit  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_freebsd-amd64) |
 | FreeBSD  | i386 32-bit  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_freebsd-386) |
 | FreeBSD  | ARM 64-bit  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_freebsd-arm64) |

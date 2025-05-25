@@ -20,7 +20,7 @@ This tool is ideal for simple network testing. It serves a static message (set a
 Precompiled binaries are available for a wide range of platforms.  
 
 
-| OS       | Arch   | Download Link |
+| OS       | Architecture   | Download Link |
 |----------|--------|---------------|
 | Linux    | AMD 64-bit  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_linux-amd64) |
 | Linux    | i386 32-bit  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_linux-386) |

@@ -36,6 +36,9 @@ jobs:
             goos: darwin
           - goarch: "arm"
             goos: darwin
+        include:
+          - goarch: "riscv64"
+            goos: linux
     steps:
       - uses: actions/checkout@v4
       - name: Build

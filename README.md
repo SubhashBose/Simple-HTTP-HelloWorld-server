@@ -18,7 +18,28 @@ This tool is ideal for simple network testing. It serves a static message (set a
 ## Download
 
 Precompiled binaries are available for a wide range of platforms.  
-👉 Visit the [Releases Page](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases) to download the appropriate version for your system.
+
+
+| OS       | Arch   | Download Link |
+|----------|--------|---------------|
+| Linux    | AMD64  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_linux-amd64) |
+| Linux    | ARM64  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_linux-arm64) |
+| Linux    | ARM    | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_linux-arm) |
+| Linux    | i386   | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_linux-386) |
+| Windows  | AMD64  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_windows-amd64.exe) |
+| Windows  | ARM64  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_windows-arm64.exe) |
+| Windows  | ARM    | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_windows-arm.exe) |
+| Windows  | i386   | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_windows-386.exe) |
+| MacOS    | AMD64  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_darwin-amd64) |
+| MacOS    | ARM64  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_darwin-arm64) |
+| FreeBSD  | AMD64  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_freebsd-amd64) |
+| FreeBSD  | ARM64  | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_freebsd-arm64) |
+| FreeBSD  | ARM    | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_freebsd-arm) |
+| FreeBSD  | i386   | [Download](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases/latest/download/http-helloworld_freebsd-386) |
+
+
+👉 You may also visit the [Releases Page](https://github.com/SubhashBose/Simple-HTTP-HelloWorld-server/releases) to download the binaries and M5D checksums.
+
 
 ## Example Usage
 

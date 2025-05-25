@@ -5,7 +5,7 @@ A minimal, dependency-free HTTP server written in Go. This utility is designed f
 ## Features
 
 - 🚀 **No external dependencies**
-- 📦 **Small binary size**
+- 📦 **Small binary size (~5 MiB)**
 - 🧠 **Small CPU and memory footprint**
 - 🛠 **Single command to run**
 - 🔒 **Secure by design** – serves only static, predefined content
